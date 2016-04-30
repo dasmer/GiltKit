@@ -32,7 +32,8 @@ extension Sale: DictionaryDeserializable {
             imageURLString = imageURLSize["url"] as? String,
             imageURL = NSURL(string: imageURLString),
             size = dictionary["size"] as? UInt,
-            store = dictionary["store"] as? Store else { return nil }
+            storeString = dictionary["store"] as? String,
+            store = Store(rawValue:storeString) else { return nil }
 
         self.name = name
         self.description = description

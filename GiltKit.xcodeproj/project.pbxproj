@@ -11,7 +11,19 @@
 		3A9155F31CD4EAD0008B428E /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155F21CD4EAD0008B428E /* Client.swift */; };
 		3A9155F51CD4ECE7008B428E /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155F41CD4ECE7008B428E /* Sale.swift */; };
 		3A9155F71CD4FD9F008B428E /* DictionarySerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155F61CD4FD9F008B428E /* DictionarySerialization.swift */; };
+		3A9155FF1CD50601008B428E /* SaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155FE1CD50601008B428E /* SaleTests.swift */; };
+		3A9156011CD50601008B428E /* GiltKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9155E51CD4E85E008B428E /* GiltKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A9156021CD50601008B428E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A9155DC1CD4E85E008B428E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A9155E41CD4E85E008B428E;
+			remoteInfo = GiltKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A9155E51CD4E85E008B428E /* GiltKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GiltKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +32,9 @@
 		3A9155F21CD4EAD0008B428E /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		3A9155F41CD4ECE7008B428E /* Sale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sale.swift; sourceTree = "<group>"; };
 		3A9155F61CD4FD9F008B428E /* DictionarySerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionarySerialization.swift; sourceTree = "<group>"; };
+		3A9155FC1CD50601008B428E /* GiltKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiltKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9155FE1CD50601008B428E /* SaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleTests.swift; sourceTree = "<group>"; };
+		3A9156001CD50601008B428E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +45,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A9155F91CD50601008B428E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9156011CD50601008B428E /* GiltKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -37,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9155E71CD4E85E008B428E /* GiltKit */,
+				3A9155FD1CD50601008B428E /* GiltKitTests */,
 				3A9155E61CD4E85E008B428E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9155E51CD4E85E008B428E /* GiltKit.framework */,
+				3A9155FC1CD50601008B428E /* GiltKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +84,15 @@
 				3A9155EA1CD4E85E008B428E /* Info.plist */,
 			);
 			path = GiltKit;
+			sourceTree = "<group>";
+		};
+		3A9155FD1CD50601008B428E /* GiltKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A9155FE1CD50601008B428E /* SaleTests.swift */,
+				3A9156001CD50601008B428E /* Info.plist */,
+			);
+			path = GiltKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,16 +127,38 @@
 			productReference = 3A9155E51CD4E85E008B428E /* GiltKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		3A9155FB1CD50601008B428E /* GiltKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9156041CD50601008B428E /* Build configuration list for PBXNativeTarget "GiltKitTests" */;
+			buildPhases = (
+				3A9155F81CD50601008B428E /* Sources */,
+				3A9155F91CD50601008B428E /* Frameworks */,
+				3A9155FA1CD50601008B428E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A9156031CD50601008B428E /* PBXTargetDependency */,
+			);
+			name = GiltKitTests;
+			productName = GiltKitTests;
+			productReference = 3A9155FC1CD50601008B428E /* GiltKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3A9155DC1CD4E85E008B428E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Dasmer Singh";
 				TargetAttributes = {
 					3A9155E41CD4E85E008B428E = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					3A9155FB1CD50601008B428E = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
@@ -120,12 +176,20 @@
 			projectRoot = "";
 			targets = (
 				3A9155E41CD4E85E008B428E /* GiltKit */,
+				3A9155FB1CD50601008B428E /* GiltKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3A9155E31CD4E85E008B428E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9155FA1CD50601008B428E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -145,7 +209,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A9155F81CD50601008B428E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9155FF1CD50601008B428E /* SaleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A9156031CD50601008B428E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A9155E41CD4E85E008B428E /* GiltKit */;
+			targetProxy = 3A9156021CD50601008B428E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3A9155EB1CD4E85E008B428E /* Debug */ = {
@@ -274,6 +354,26 @@
 			};
 			name = Release;
 		};
+		3A9156051CD50601008B428E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GiltKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.columbia.GiltKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3A9156061CD50601008B428E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GiltKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.columbia.GiltKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -291,6 +391,14 @@
 			buildConfigurations = (
 				3A9155EE1CD4E85E008B428E /* Debug */,
 				3A9155EF1CD4E85E008B428E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3A9156041CD50601008B428E /* Build configuration list for PBXNativeTarget "GiltKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9156051CD50601008B428E /* Debug */,
+				3A9156061CD50601008B428E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

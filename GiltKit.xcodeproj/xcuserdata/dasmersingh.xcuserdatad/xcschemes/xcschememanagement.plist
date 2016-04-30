@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>GiltKitTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>3A9155E41CD4E85E008B428E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3A9155FB1CD50601008B428E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
