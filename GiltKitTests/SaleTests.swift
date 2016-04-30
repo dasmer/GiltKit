@@ -16,7 +16,9 @@ class SaleTests: XCTestCase {
             "description": "The best video games",
             "image_urls": [
                 "676x686": [
-                    "url": "http://cdn1.gilt.com/images/share/uploads/0000/0005/0632/506321259/orig.jpg"
+                    [
+                        "url": "http://cdn1.gilt.com/images/share/uploads/0000/0005/0632/506321259/orig.jpg"
+                    ]
                 ]
             ],
             "size": 15,

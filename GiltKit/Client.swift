@@ -6,17 +6,20 @@ public struct Client {
 
     let session: NSURLSession
 
-    init(session: NSURLSession = NSURLSession.sharedSession()) {
+    public init(session: NSURLSession = NSURLSession.sharedSession()) {
         self.session = session
     }
 
     public func listSalesForStore(store: Store, kind: Sale.Kind, completion: (([Sale]) -> ())) {
-        guard let request = buildRequestWithPath("sales/\(store.rawValue)/\(kind.rawValue)") else { return }
+        guard let request = buildRequestWithPath("sales/\(store.rawValue)/\(kind.rawValue).json") else { return }
 
         let task = session.dataTaskWithRequest(request) { data, response, error in
             guard let data = data,
                 json = Client.parseData(data) as? JSONDictionary,
-                saleJSONs = json["sales"] as? [JSONDictionary] else { return }
+                saleJSONs = json["sales"] as? [JSONDictionary] else {
+                    completion([])
+                    return
+            }
 
             let sales = saleJSONs.flatMap{ Sale(dictionary: $0) }
             completion(sales)
@@ -32,7 +35,8 @@ public struct Client {
         parameters["apikey"] = Client.apiKey
 
         let urlString = "\(Client.baseURL)/\(path)?\(stringFromHttpParameters(parameters))"
-        guard let escapedString = urlString.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()), let url = NSURL(string: escapedString) else { return nil }
+        print( urlString)
+        guard let url = NSURL(string: urlString) else { return nil }
         let request = NSURLRequest(URL: url)
 
         return request
@@ -40,11 +44,8 @@ public struct Client {
 
     private func stringFromHttpParameters(parameters: JSONDictionary) -> String {
         let parameterArray = parameters.map { (key, value) -> String in
-            let percentEscapedKey = key.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
-            let percentEscapedValue = value.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
-            return "\(percentEscapedKey)=\(percentEscapedValue)"
+            return "\(key)=\(value)"
         }
-
         return parameterArray.joinWithSeparator("&")
     }
 
