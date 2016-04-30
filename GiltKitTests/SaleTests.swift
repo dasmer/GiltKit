@@ -10,6 +10,7 @@ import XCTest
 import GiltKit
 
 class SaleTests: XCTestCase {
+
     func testDictionaryInit() {
         let dictionary = [
             "name": "Video Games",
