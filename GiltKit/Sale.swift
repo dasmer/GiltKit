@@ -28,10 +28,7 @@ extension Sale: DictionaryDeserializable {
         guard let name = dictionary["name"] as? String,
             description = dictionary["description"] as? String,
             imageURLSizes = dictionary["image_urls"] as? JSONDictionary,
-            imageURLSizeArray = imageURLSizes["676x686"] as? [JSONDictionary],
-            imageURLSize = imageURLSizeArray.first,
-            imageURLString = imageURLSize["url"] as? String,
-            imageURL = NSURL(string: imageURLString),
+            imageURL = NSURL(giltImagesDictionary: imageURLSizes),
             size = dictionary["size"] as? UInt,
             storeString = dictionary["store"] as? String,
             store = Store(rawValue:storeString) else { return nil }
@@ -41,5 +38,28 @@ extension Sale: DictionaryDeserializable {
         self.imageURL = imageURL
         self.size = size
         self.store = store
+    }
+}
+
+
+private extension NSURL {
+
+    private static var imageSizes = ["2544x1344", "1536x640", "676x686", "624x668", "506x520"]
+
+    convenience init?(giltImagesDictionary dictionary: JSONDictionary) {
+        var urlString: String? = nil
+
+        for imageSize in NSURL.imageSizes {
+            if let imageURLSizeArray = dictionary[imageSize] as? [JSONDictionary],
+                imageURLSize = imageURLSizeArray.first,
+                imageURLString = imageURLSize["url"] as? String where imageURLString != "" {
+                urlString = imageURLString
+                break
+            }
+        }
+
+        guard let urlStr = urlString else { return nil }
+
+        self.init(string:urlStr)
     }
 }
