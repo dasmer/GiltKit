@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A9C08F61CDADB0000582BCD"
-               BuildableName = "GiltKit-tvOS.framework"
+               BuildableName = "GiltKit.framework"
                BlueprintName = "GiltKit-tvOS"
                ReferencedContainer = "container:GiltKit.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A9C08F61CDADB0000582BCD"
-            BuildableName = "GiltKit-tvOS.framework"
+            BuildableName = "GiltKit.framework"
             BlueprintName = "GiltKit-tvOS"
             ReferencedContainer = "container:GiltKit.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A9C08F61CDADB0000582BCD"
-            BuildableName = "GiltKit-tvOS.framework"
+            BuildableName = "GiltKit.framework"
             BlueprintName = "GiltKit-tvOS"
             ReferencedContainer = "container:GiltKit.xcodeproj">
          </BuildableReference>
