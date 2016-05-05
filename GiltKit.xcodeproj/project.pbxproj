@@ -16,6 +16,10 @@
 		3A91560B1CD509C2008B428E /* DVR.framework in Embedded Frameworks */ = {isa = PBXBuildFile; fileRef = 3A91560A1CD509C2008B428E /* DVR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A91560C1CD509D8008B428E /* DVR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A91560A1CD509C2008B428E /* DVR.framework */; };
 		3A91560E1CD50A29008B428E /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91560D1CD50A29008B428E /* ClientTests.swift */; };
+		3A9C08F81CDADB0000582BCD /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155F21CD4EAD0008B428E /* Client.swift */; };
+		3A9C08F91CDADB0000582BCD /* DictionarySerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155F61CD4FD9F008B428E /* DictionarySerialization.swift */; };
+		3A9C08FA1CDADB0000582BCD /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155F41CD4ECE7008B428E /* Sale.swift */; };
+		3A9C08FD1CDADB0000582BCD /* GiltKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9155E81CD4E85E008B428E /* GiltKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3AEF550C1CD514AD0022BEA5 /* api-listSales.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF550B1CD514AD0022BEA5 /* api-listSales.json */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +59,7 @@
 		3A9156001CD50601008B428E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A91560A1CD509C2008B428E /* DVR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVR.framework; path = Carthage/Build/iOS/DVR.framework; sourceTree = "<group>"; };
 		3A91560D1CD50A29008B428E /* ClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTests.swift; sourceTree = "<group>"; };
+		3A9C09021CDADB0000582BCD /* GiltKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GiltKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEF550B1CD514AD0022BEA5 /* api-listSales.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "api-listSales.json"; path = "Fixtures/api-listSales.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +77,13 @@
 			files = (
 				3A91560C1CD509D8008B428E /* DVR.framework in Frameworks */,
 				3A9156011CD50601008B428E /* GiltKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9C08FB1CDADB0000582BCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +105,7 @@
 			children = (
 				3A9155E51CD4E85E008B428E /* GiltKit.framework */,
 				3A9155FC1CD50601008B428E /* GiltKitTests.xctest */,
+				3A9C09021CDADB0000582BCD /* GiltKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,12 +160,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A9C08FC1CDADB0000582BCD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9C08FD1CDADB0000582BCD /* GiltKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3A9155E41CD4E85E008B428E /* GiltKit */ = {
+		3A9155E41CD4E85E008B428E /* GiltKit-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A9155ED1CD4E85E008B428E /* Build configuration list for PBXNativeTarget "GiltKit" */;
+			buildConfigurationList = 3A9155ED1CD4E85E008B428E /* Build configuration list for PBXNativeTarget "GiltKit-iOS" */;
 			buildPhases = (
 				3A9155E01CD4E85E008B428E /* Sources */,
 				3A9155E11CD4E85E008B428E /* Frameworks */,
@@ -163,7 +184,7 @@
 			);
 			dependencies = (
 			);
-			name = GiltKit;
+			name = "GiltKit-iOS";
 			productName = GiltKit;
 			productReference = 3A9155E51CD4E85E008B428E /* GiltKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -186,6 +207,24 @@
 			productName = GiltKitTests;
 			productReference = 3A9155FC1CD50601008B428E /* GiltKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A9C08F61CDADB0000582BCD /* GiltKit-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9C08FF1CDADB0000582BCD /* Build configuration list for PBXNativeTarget "GiltKit-tvOS" */;
+			buildPhases = (
+				3A9C08F71CDADB0000582BCD /* Sources */,
+				3A9C08FB1CDADB0000582BCD /* Frameworks */,
+				3A9C08FC1CDADB0000582BCD /* Headers */,
+				3A9C08FE1CDADB0000582BCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GiltKit-tvOS";
+			productName = GiltKit;
+			productReference = 3A9C09021CDADB0000582BCD /* GiltKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -217,8 +256,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A9155E41CD4E85E008B428E /* GiltKit */,
+				3A9155E41CD4E85E008B428E /* GiltKit-iOS */,
 				3A9155FB1CD50601008B428E /* GiltKitTests */,
+				3A9C08F61CDADB0000582BCD /* GiltKit-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +276,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEF550C1CD514AD0022BEA5 /* api-listSales.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9C08FE1CDADB0000582BCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,12 +308,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A9C08F71CDADB0000582BCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9C08F81CDADB0000582BCD /* Client.swift in Sources */,
+				3A9C08F91CDADB0000582BCD /* DictionarySerialization.swift in Sources */,
+				3A9C08FA1CDADB0000582BCD /* Sale.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		3A9156031CD50601008B428E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A9155E41CD4E85E008B428E /* GiltKit */;
+			target = 3A9155E41CD4E85E008B428E /* GiltKit-iOS */;
 			targetProxy = 3A9156021CD50601008B428E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -375,7 +432,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.columbia.GiltKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GiltKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -393,7 +450,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.columbia.GiltKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GiltKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -426,6 +483,43 @@
 			};
 			name = Release;
 		};
+		3A9C09001CDADB0000582BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GiltKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.columbia.GiltKit;
+				PRODUCT_NAME = GiltKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A9C09011CDADB0000582BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GiltKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.columbia.GiltKit;
+				PRODUCT_NAME = GiltKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -438,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A9155ED1CD4E85E008B428E /* Build configuration list for PBXNativeTarget "GiltKit" */ = {
+		3A9155ED1CD4E85E008B428E /* Build configuration list for PBXNativeTarget "GiltKit-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A9155EE1CD4E85E008B428E /* Debug */,
@@ -452,6 +546,15 @@
 			buildConfigurations = (
 				3A9156051CD50601008B428E /* Debug */,
 				3A9156061CD50601008B428E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9C08FF1CDADB0000582BCD /* Build configuration list for PBXNativeTarget "GiltKit-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9C09001CDADB0000582BCD /* Debug */,
+				3A9C09011CDADB0000582BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
