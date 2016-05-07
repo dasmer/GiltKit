@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double GiltKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char GiltKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <GiltKit/PublicHeader.h>
-
-
