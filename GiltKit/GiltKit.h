@@ -6,7 +6,7 @@
 //  Copyright © 2016 Dasmer Singh. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 //! Project version number for GiltKit.
 FOUNDATION_EXPORT double GiltKitVersionNumber;
