@@ -24,6 +24,10 @@
 		3A9C090A1CDE5BBC00582BCD /* DictionarySerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155F61CD4FD9F008B428E /* DictionarySerialization.swift */; };
 		3A9C090B1CDE5BBC00582BCD /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155F41CD4ECE7008B428E /* Sale.swift */; };
 		3A9C090E1CDE5BBC00582BCD /* GiltKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9155E81CD4E85E008B428E /* GiltKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A9C093C1CDFC0F000582BCD /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155F21CD4EAD0008B428E /* Client.swift */; };
+		3A9C093D1CDFC0F000582BCD /* DictionarySerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155F61CD4FD9F008B428E /* DictionarySerialization.swift */; };
+		3A9C093E1CDFC0F000582BCD /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9155F41CD4ECE7008B428E /* Sale.swift */; };
+		3A9C09411CDFC0F000582BCD /* GiltKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9155E81CD4E85E008B428E /* GiltKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3AEF550C1CD514AD0022BEA5 /* api-listSales.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF550B1CD514AD0022BEA5 /* api-listSales.json */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +69,7 @@
 		3A91560D1CD50A29008B428E /* ClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTests.swift; sourceTree = "<group>"; };
 		3A9C09021CDADB0000582BCD /* GiltKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GiltKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9C09131CDE5BBC00582BCD /* GiltKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GiltKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9C09461CDFC0F000582BCD /* GiltKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GiltKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEF550B1CD514AD0022BEA5 /* api-listSales.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "api-listSales.json"; path = "Fixtures/api-listSales.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +104,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A9C093F1CDFC0F000582BCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -119,6 +131,7 @@
 				3A9155FC1CD50601008B428E /* GiltKitTests.xctest */,
 				3A9C09021CDADB0000582BCD /* GiltKit.framework */,
 				3A9C09131CDE5BBC00582BCD /* GiltKit.framework */,
+				3A9C09461CDFC0F000582BCD /* GiltKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +199,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A9C090E1CDE5BBC00582BCD /* GiltKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9C09401CDFC0F000582BCD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9C09411CDFC0F000582BCD /* GiltKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +286,24 @@
 			productReference = 3A9C09131CDE5BBC00582BCD /* GiltKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		3A9C093A1CDFC0F000582BCD /* GiltKit-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9C09431CDFC0F000582BCD /* Build configuration list for PBXNativeTarget "GiltKit-watchOS" */;
+			buildPhases = (
+				3A9C093B1CDFC0F000582BCD /* Sources */,
+				3A9C093F1CDFC0F000582BCD /* Frameworks */,
+				3A9C09401CDFC0F000582BCD /* Headers */,
+				3A9C09421CDFC0F000582BCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GiltKit-watchOS";
+			productName = GiltKit;
+			productReference = 3A9C09461CDFC0F000582BCD /* GiltKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -299,6 +338,7 @@
 				3A9155FB1CD50601008B428E /* GiltKitTests */,
 				3A9C08F61CDADB0000582BCD /* GiltKit-tvOS */,
 				3A9C09071CDE5BBC00582BCD /* GiltKit-OSX */,
+				3A9C093A1CDFC0F000582BCD /* GiltKit-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -327,6 +367,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3A9C090F1CDE5BBC00582BCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9C09421CDFC0F000582BCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -372,6 +419,16 @@
 				3A9C09091CDE5BBC00582BCD /* Client.swift in Sources */,
 				3A9C090A1CDE5BBC00582BCD /* DictionarySerialization.swift in Sources */,
 				3A9C090B1CDE5BBC00582BCD /* Sale.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9C093B1CDFC0F000582BCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9C093C1CDFC0F000582BCD /* Client.swift in Sources */,
+				3A9C093D1CDFC0F000582BCD /* DictionarySerialization.swift in Sources */,
+				3A9C093E1CDFC0F000582BCD /* Sale.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +673,45 @@
 			};
 			name = Release;
 		};
+		3A9C09441CDFC0F000582BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GiltKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.columbia.GiltKit;
+				PRODUCT_NAME = GiltKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		3A9C09451CDFC0F000582BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GiltKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.columbia.GiltKit;
+				PRODUCT_NAME = GiltKit;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -660,6 +756,15 @@
 			buildConfigurations = (
 				3A9C09111CDE5BBC00582BCD /* Debug */,
 				3A9C09121CDE5BBC00582BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9C09431CDFC0F000582BCD /* Build configuration list for PBXNativeTarget "GiltKit-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9C09441CDFC0F000582BCD /* Debug */,
+				3A9C09451CDFC0F000582BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

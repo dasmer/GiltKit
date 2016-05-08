@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A9C09071CDE5BBC00582BCD"
-               BuildableName = "GiltKit.framework"
-               BlueprintName = "GiltKit-OSX"
+               BlueprintIdentifier = "3A9C093A1CDFC0F000582BCD"
+               BuildableName = "GiltKit-watchOS.framework"
+               BlueprintName = "GiltKit-watchOS"
                ReferencedContainer = "container:GiltKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A9C09071CDE5BBC00582BCD"
-            BuildableName = "GiltKit.framework"
-            BlueprintName = "GiltKit-OSX"
+            BlueprintIdentifier = "3A9C093A1CDFC0F000582BCD"
+            BuildableName = "GiltKit-watchOS.framework"
+            BlueprintName = "GiltKit-watchOS"
             ReferencedContainer = "container:GiltKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A9C09071CDE5BBC00582BCD"
-            BuildableName = "GiltKit.framework"
-            BlueprintName = "GiltKit-OSX"
+            BlueprintIdentifier = "3A9C093A1CDFC0F000582BCD"
+            BuildableName = "GiltKit-watchOS.framework"
+            BlueprintName = "GiltKit-watchOS"
             ReferencedContainer = "container:GiltKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
