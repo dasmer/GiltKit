@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A9C093A1CDFC0F000582BCD"
-               BuildableName = "GiltKit-watchOS.framework"
+               BuildableName = "GiltKit.framework"
                BlueprintName = "GiltKit-watchOS"
                ReferencedContainer = "container:GiltKit.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A9C093A1CDFC0F000582BCD"
-            BuildableName = "GiltKit-watchOS.framework"
+            BuildableName = "GiltKit.framework"
             BlueprintName = "GiltKit-watchOS"
             ReferencedContainer = "container:GiltKit.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A9C093A1CDFC0F000582BCD"
-            BuildableName = "GiltKit-watchOS.framework"
+            BuildableName = "GiltKit.framework"
             BlueprintName = "GiltKit-watchOS"
             ReferencedContainer = "container:GiltKit.xcodeproj">
          </BuildableReference>
