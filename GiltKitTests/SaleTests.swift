@@ -1,13 +1,5 @@
-//
-//  GiltKitTests.swift
-//  GiltKitTests
-//
-//  Created by Dasmer Singh on 4/30/16.
-//  Copyright © 2016 Dasmer Singh. All rights reserved.
-//
-
 import XCTest
-import GiltKit
+@testable import GiltKit
 
 class SaleTests: XCTestCase {
 

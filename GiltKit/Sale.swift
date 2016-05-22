@@ -44,7 +44,7 @@ extension Sale: DictionaryDeserializable {
 
 private extension NSURL {
 
-    private static var imageSizes = ["676x686", "624x668", "506x520", "466x247", "315x295"]
+    private static var imageSizes = ["744x281" ,"676x686", "624x668", "506x520", "466x247", "315x295"]
 
     convenience init?(giltImagesDictionary dictionary: JSONDictionary) {
         var urlString: String? = nil

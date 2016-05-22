@@ -1,6 +1,6 @@
 import XCTest
-import GiltKit
 import DVR
+@testable import GiltKit
 
 class ClientTests: XCTestCase {
 

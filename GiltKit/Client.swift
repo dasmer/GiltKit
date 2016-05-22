@@ -6,9 +6,14 @@ public struct Client {
 
     let session: NSURLSession
 
-    public init(session: NSURLSession = NSURLSession.sharedSession()) {
+    public init() {
+        self.session = NSURLSession.sharedSession()
+    }
+
+    init(session: NSURLSession) {
         self.session = session
     }
+
 
     public func listSalesForStore(store: Store, kind: Sale.Kind, completion: (([Sale]) -> ())) {
         guard let request = buildRequestWithPath("sales/\(store.rawValue)/\(kind.rawValue).json") else { return }
