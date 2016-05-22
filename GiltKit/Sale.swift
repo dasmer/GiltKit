@@ -24,7 +24,7 @@ public struct Sale {
 
 extension Sale: DictionaryDeserializable {
 
-    public init?(dictionary: JSONDictionary) {
+    init?(dictionary: JSONDictionary) {
         guard let name = dictionary["name"] as? String,
             description = dictionary["description"] as? String,
             imageURLSizes = dictionary["image_urls"] as? JSONDictionary,

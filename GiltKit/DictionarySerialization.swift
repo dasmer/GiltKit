@@ -1,9 +1,5 @@
-public typealias JSONDictionary = [String: AnyObject]
+typealias JSONDictionary = [String: AnyObject]
 
-public protocol DictionaryDeserializable {
+protocol DictionaryDeserializable {
     init?(dictionary: JSONDictionary)
-}
-
-public protocol DictionarySerializable {
-    var dictionary: JSONDictionary { get }
 }
